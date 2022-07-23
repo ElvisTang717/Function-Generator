@@ -1,6 +1,10 @@
 # Function-Generator
 
 # Abstract
+* Configured the GPIO pins and SPI to enable STM32 to transmit data with DAC through SPI.
+* Created lookup tables for each waveform and configured the timer to generate interrupts so that the DAC can output a specific voltage from lookup tables during each interrupt.
+* Utilized global flags and switch statements controlled by the keypad to select a specific lookup table and further adjust the function waveforms, frequencies, and duty cycles that are displayed on the oscilloscope.
+
 
 # Project Introduction
 This project aims to design a function generator by integrating a DAC(MCP 4921 E/P), a 4 X 4 keyboard, and the MCU STM32L476. The function generator could generate 4 different function waveforms, which include sine wave, triangle wave, sawtooth wave, and square wave. The Function Generator could display five different frequencies: 100 Hz, 200Hz, 300Hz, 400Hz, 500Hz for each waveform, and could also adjust the duty cycle of the square wave from 10% through 90% with an interval of 10%. <br /> 
