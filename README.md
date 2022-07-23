@@ -6,7 +6,6 @@ All the functions of the function generator are controlled by the 4 X 4 keypad. 
 The waveform is generated through outputting different voltages(0V ~ 3V) on the oscilloscope by digital to analog converter(DAC).<br />
 
 # System Specification
-* LCD Module: <br />
 It can be seen from the below specifications of the LCD module that the size of the LCD monitor we used for the lockbox is sufficient, and the color contrast is very good. It can not only display the instructions clearly but also have enough space to key in the pins. The power requirement is 3.3V, which is basically very low, so we can use a very small power supply to drive the LCD. <br />
 
 | Wave Form | Sin wave, Triangle Wave, Sawtooth Wave, Square Wave|
