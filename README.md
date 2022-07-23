@@ -26,10 +26,31 @@ It can be seen from the below specifications of the LCD module that the size of 
 
 # Software Architecture
 * Calculations - Interrupt Period & Max Resolution:<br />
-ISR_exe: 2.115us (68 clock cycle)
-ISR_Start: 0.75us (92-68 = 24 clock cycle)
+
+```
+ISR_exe = 2.115us (68 clock cycle)
+ISR_Start = 0.75us (92-68 = 24 clock cycle)
 ISR_Total = 2.865us
-$$ (Points/Waveform = (10ms*100khz)/2.865us)
+
+Points \ Waveform = (10ms*100khz) \ 2.865us
+                  = 1960 points
+To make the amount of points can be divided by 3,4,5 
+                  => 1800 points
+                  
+ISR_Total = 10ms / 1800 points = 5.555us
+Clock Cycle = 5.55us * 32 Mhz
+            = 177.778 clock cycle
+            = 178 (CCR1)
+```
+
+| ISR Execute Time(ISR_exe) | 2.115us|
+| :-----------:  | :-----------: |
+| ISR Start Time(ISR_start)| 0.75us |
+| ISR Total Time(ISR_tol) |2.865us|
+| Maximum Resolution | 1960 samples/ 100Hz_wave |
+|Ideal Resolution (Can be divided by 3, 4, and 5)| 1800 samples/ 100Hz_wave |
+| Ideal ISR Total Time| 5.555us |
+| Ideal Clock Cycle |178 clock cycle|
 
 * main():
 <p align="center">
